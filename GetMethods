@@ -1,0 +1,22 @@
+local side = "BigReactors-Reactor_1" -- Target
+local outputFile = "methods.txt"
+
+if not peripheral.isPresent(side) then
+    print("❌ Peripheral not found on: " .. side)
+    return
+end
+
+local methods = peripheral.getMethods(side)
+
+local file = fs.open(outputFile, "w")
+file.writeLine("Peripheral: " .. side)
+file.writeLine("Methods:")
+file.writeLine("-----------")
+
+for _, method in ipairs(methods) do
+    file.writeLine(method)
+end
+
+file.close()
+
+print("Method list written to " .. outputFile)
