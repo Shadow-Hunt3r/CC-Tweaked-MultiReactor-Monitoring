@@ -9,7 +9,7 @@ local function getPeripheralsOfType(typeKey)
 
     for _, name in ipairs(peripheral.getNames()) do
         local pType = peripheral.getType(name)
-        if pType and pType:match(matchStr) then
+        if pType == matchStr then
             table.insert(matches, name)
         end
     end
@@ -18,8 +18,8 @@ local function getPeripheralsOfType(typeKey)
 end
 
 -- Get connected peripherals and counts
-local reactors = getPeripheralsOfType(config.AllowedTypes.Reactor)
-local turbines = getPeripheralsOfType(config.AllowedTypes.Turbine)
+local reactors = getPeripheralsOfType("Reactor")
+local turbines = getPeripheralsOfType("Turbine")
 
 local reactorCount = #reactors
 local turbineCount = #turbines
