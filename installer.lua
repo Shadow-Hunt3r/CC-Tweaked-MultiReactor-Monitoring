@@ -2,11 +2,9 @@ local base = "https://raw.githubusercontent.com/YourUsername/YourRepo/main/"
 
 local files = {
   "config.lua",
-  "utils.lua",
   "loader.lua",
   "reactorHandler.lua",
   "turbineHandler.lua",
-  "autoSelector.lua"
 }
 
 for _, file in ipairs(files) do
