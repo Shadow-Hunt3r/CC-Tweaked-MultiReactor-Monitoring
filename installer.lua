@@ -1,4 +1,4 @@
-local base = "https://raw.githubusercontent.com/YourUsername/YourRepo/main/"
+local base = "https://raw.githubusercontent.com/Shadow-Hunt3r/CC-Tweaked-MultiReactor-Monitoring/main/"
 
 local files = {
   "config.lua",
